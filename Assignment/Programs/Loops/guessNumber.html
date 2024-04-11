@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // guess number game
+var numbers = [1, 2, 3, 4, 5]
+var uservalue = parseInt(prompt("Enter Number"));
+var randomNum = Math.floor(Math.random() * numbers.length);
+console.log(randomNum);
+if(uservalue===randomNum){
+    document.write("You are win")
+}
+else{
+    document.write("You loose")
+}
+    </script>
+</body>
+</html>

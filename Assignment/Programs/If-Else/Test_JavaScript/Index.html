@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+
+
+
+        // First Program
+        let score = parseInt(prompt("Enter Your Score"));
+        if (score >= 0 && score <= 100) {
+            if (score >= 90) {
+                document.write("Your Grade is A+");
+            } else if (score >= 80) {
+                document.write("Your Grade is A");
+            } else if (score >= 70) {
+                document.write("Your Grade is B");
+            } else if (score >= 60) {
+                document.write("Your Grade is C");
+            } else {
+                document.write("Your Are Fail");
+            }
+        } else {
+            document.write("Invalid Score");
+        }
+
+
+
+
+
+
+        // Second Program
+        let UserName = prompt("Enter Username");
+        if (UserName == "admin") {
+            let Password = parseInt(prompt("Enter Password"));
+            if (Password == 1234) {
+                window.location.replace("Admin.html");
+                // document.write("Welcome" + " " + UserName);
+            }
+            else {
+                document.write("Invalid Password");
+            }
+        }
+        else {
+            document.write("Invalid username");
+        }
+
+        // Third Program
+        let age = parseInt(prompt("Enter your age:"));
+
+        if (age < 5) {
+            document.write("Your ticket price is Free");
+        } else if (age >= 5 && age <= 12) {
+            document.write("Your ticket price is $10");
+        } else if (age >= 13 && age <= 60) {
+            document.write("Your ticket price is $20");
+        } else if (age > 60) {
+            document.write("Your ticket price is $15");
+        } else {
+            document.write("Invalid age entered.");
+        }
+
+        // Forth Program
+        let Operator = prompt("Enter Operator");
+        if (Operator == "+" || Operator == "-" || Operator == "*" || Operator == "/") {
+            let FirstOperand = parseInt(prompt("Enter First Number"));
+            let SecondOperand = parseInt(prompt("Enter Second Number"));
+            let result;
+            if (Operator == "+") {
+                result = FirstOperand + SecondOperand;
+                document.write(`Result of ${Operator} operation: ${result}`);
+            } else if (Operator == "-") {
+                result = FirstOperand - SecondOperand;
+                document.write(`Result of ${Operator} operation: ${result}`);
+            } else if (Operator == "*") {
+                result = FirstOperand * SecondOperand;
+                document.write(`Result of ${Operator} operation: ${result}`);
+            } else if (Operator == "/") {
+                if (SecondOperand != 0) {
+                    result = FirstOperand / SecondOperand;
+                    document.write(`Result of ${Operator} operation: ${result}`);
+                } else {
+                    document.write("Error: Division by zero");
+                }
+            }
+        }
+        else {
+            document.write("Invalid Operator");
+        };
+
+        // Fifth Program
+        let purchaseAmount = parseInt(prompt("Enter the total purchase amount:"));
+        let discountedPrice;
+        let FivePer = purchaseAmount - 5 * purchaseAmount / 100;
+        let TenPer = purchaseAmount - 10 * purchaseAmount / 100;
+        let FifteenPer = purchaseAmount - 15 * purchaseAmount / 100;
+        if (purchaseAmount < 100) {
+            document.write(` No discount for purchases below $100.`);
+        } else if (purchaseAmount >= 100 && purchaseAmount <= 499) {
+            discountedPrice = FivePer;
+            document.write(`Final price after discount: $${discountedPrice}`);
+        } else if (purchaseAmount >= 500 && purchaseAmount <= 999) {
+            discountedPrice = TenPer;
+            document.write(`Final price after discount: $${discountedPrice}`);
+        } else {
+            discountedPrice = FifteenPer;
+            document.write(`Final price after discount: $${discountedPrice}`);
+        }
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

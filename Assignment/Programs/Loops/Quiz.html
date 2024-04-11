@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz</title>
+</head>
+<style>
+    #question{
+        color: aqua;
+        font-size: large;
+    }
+    #options button{
+        color: rgb(106, 0, 255);
+        font-size: large;
+        margin: 5px;
+        /* padding: 50px; */
+    }
+</style>
+<body>
+    <h1>Welcome to the Quiz!</h1>
+    <p id="question"></p>
+    <div id="options"></div>
+    <button id="submitBtn">Submit Answer</button>
+
+    <script>
+        // Quiz questions and answers
+        const quiz = [
+            {
+                question: "What is the capital of France?",
+                options: ["Paris", "London", "Berlin", "Rome"],
+                answer: "Paris"
+            },
+            {
+                question: "What is the largest mammal?",
+                options: ["Elephant", "Blue Whale", "Giraffe", "Hippopotamus"],
+                answer: "Blue Whale"
+            },
+            {
+                question: "What is the chemical symbol for water?",
+                options: ["O", "W", "H2O", "W2O"],
+                answer: "H2O"
+            }
+        ];
+
+        let currentQuestionIndex = 0;
+        let score = 0;
+
+        // Function to display current question
+        function displayQuestion() {
+            const currentQuestion = quiz[currentQuestionIndex];
+            document.getElementById("question").textContent = currentQuestion.question;
+
+            const optionsContainer = document.getElementById("options");
+            optionsContainer.innerHTML = "";
+
+            currentQuestion.options.forEach(option => {
+                const button = document.createElement("button");
+                button.textContent = option;
+                button.addEventListener("click", function() {
+                    selectAnswer(option);
+                });
+                optionsContainer.appendChild(button);
+            });
+        }
+
+        // Function to check selected answer
+        function selectAnswer(selectedOption) {
+            const currentQuestion = quiz[currentQuestionIndex];
+            if (selectedOption === currentQuestion.answer) {
+                score++;
+            }
+            currentQuestionIndex++;
+            if (currentQuestionIndex < quiz.length) {
+                displayQuestion();
+            } else {
+                showResult();
+            }
+        }
+
+        // Function to show quiz result
+        function showResult() {
+            document.getElementById("question").textContent = `Quiz completed! Your score: ${score}/${quiz.length}`;
+            document.getElementById("options").innerHTML = "";
+            document.getElementById("submitBtn").style.display = "none";
+        }
+
+        // Start the quiz
+        displayQuestion();
+
+    </script>
+</body>
+</html>
