@@ -1,11 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>After Login</title>
 </head>
+
 <body>
     <h1>Welcome!</h1>
+    <!-- <button onclick="destroy()">Logout</button> -->
+    <button id="logout">Logout</button>
+
+    <script src="assets/loginForm.js"></script>
+    <script>
+        var logout = document.getElementById('logout')
+        logout.addEventListener('click', function (out) {
+            sessionStorage.setItem('isloggin', 'false');
+            window.location.href = "index.html";
+        })
+        if (sessionStorage.getItem('isloggin') !== 'true') {
+            alert("You are Not Logged In");
+            window.location.href = 'index.html';
+        }
+    </script>
 </body>
+
 </html>
