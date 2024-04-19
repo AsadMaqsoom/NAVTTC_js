@@ -1,14 +1,15 @@
 // var bulb = document.getElementById('bulb')
-// var btn = document.getElementById('btn')
-var shape = 0;
+var bulbImage = document.getElementById('bulb-image')
+var btn = document.getElementById('btn')
+var shape = "yellow";
 btn.addEventListener('click', function(){
-    if (shape == 0) {
-        bulb.style.backgroundColor= "yellow";
-        shape = 1;
+    if (shape == "yellow") {
+        bulbImage.style.backgroundColor= "yellow";
+        shape = "Aqua";
     }
     else{
-        bulb.style.backgroundColor= "aqua"; 
-        shape = 0;
+        bulbImage.style.backgroundColor= "aqua"; 
+        shape = "yellow";
     }
 
 })
