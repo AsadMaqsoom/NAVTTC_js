@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DOM</title>
+  <style>
+    #abc {
+      cursor: pointer;
+    }
+  </style>
+  <link rel="stylesheet" href="https://cdn.datatables.net/2.0.3/css/dataTables.dataTables.css" />
+  <link rel="stylesheet" href="https://cdn.datatables.net/buttons/3.0.1/css/buttons.dataTables.css" />
+
+
+
+</head>
+
+<body>
+  <!-- By Using ID -->
+  <!-- <h1 id="abc">Asad Ali</h1> -->
+
+  <!-- By Using Class -->
+  <!-- <h1 class="abc">Asad Ali</h1>
+  <h1 class="abc">Abc Ali</h1> -->
+
+  <!-- <h1 onclick="checkkaro()" id="abc">Asad Ali</h1> -->
+
+  <!-- <h1>Add Numbers</h1>
+
+  <label for=""> Number 1</label>
+  <input type="text" id="num1">
+
+  <label for=""> Number 2</label>
+  <input type="text" id="num2">
+
+  <label for="">Output </label>
+  <input type="text" id="output" readonly disabled>
+ -->
+
+  <table border="1" width="100%" cellpadding="2" cellspacing="0" id="myTable">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Age</th>
+        <th>City</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Aqsa</td>
+        <td>23</td>
+        <td>Lahore</td>
+      </tr>
+      <tr>
+        <td>Kinza</td>
+        <td>50</td>
+        <td>Islamabad</td>
+      </tr>
+      <tr>
+        <td>Daniyal</td>
+        <td>21</td>
+        <td>Karachi</td>
+      </tr>
+      <tr>
+        <td>Taha</td>
+        <td>24</td>
+        <td>Karachi</td>
+      </tr>
+      <tr>
+        <td>Taha</td>
+        <td>24</td>
+        <td>Karachi</td>
+      </tr>
+      <tr>
+        <td>Taha</td>
+        <td>24</td>
+        <td>Karachi</td>
+      </tr>
+      <tr>
+        <td>Taha</td>
+        <td>24</td>
+        <td>Karachi</td>
+      </tr>
+      <tr>
+        <td>Taha</td>
+        <td>24</td>
+        <td>Karachi</td>
+      </tr>
+      <tr>
+        <td>Taha</td>
+        <td>24</td>
+        <td>Karachi</td>
+      </tr>
+      <tr>
+        <td>Taha</td>
+        <td>24</td>
+        <td>Karachi</td>
+      </tr>
+      <tr>
+        <td>Taha</td>
+        <td>24</td>
+        <td>Karachi</td>
+      </tr>
+      <tr>
+        <td>Taha</td>
+        <td>24</td>
+        <td>Karachi</td>
+      </tr>
+      <tr>
+        <td>Taha</td>
+        <td>24</td>
+        <td>Karachi</td>
+      </tr>
+      <tr>
+        <td>Taha</td>
+        <td>24</td>
+        <td>Karachi</td>
+      </tr>
+      <tr>
+        <td>Taha</td>
+        <td>24</td>
+        <td>Karachi</td>
+      </tr>
+      <tr>
+        <td>Taha</td>
+        <td>24</td>
+        <td>Karachi</td>
+      </tr>
+      <tr>
+        <td>Taha</td>
+        <td>24</td>
+        <td>Karachi</td>
+      </tr>
+      <tr>
+        <td>Taha</td>
+        <td>24</td>
+        <td>Karachi</td>
+      </tr>
+      <tr>
+        <td>Taha</td>
+        <td>24</td>
+        <td>Karachi</td>
+      </tr>
+
+    </tbody>
+  </table>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="https://cdn.datatables.net/2.0.3/js/dataTables.js"></script>
+  <script src="https://cdn.datatables.net/buttons/3.0.1/js/dataTables.buttons.js"></script>
+  <script src="  https://cdn.datatables.net/buttons/3.0.1/js/buttons.dataTables.js"></script>
+  <script src="  https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.2.7/pdfmake.min.js"></script>
+  <script src="  https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.2.7/vfs_fonts.js"></script>
+  <script src="  https://cdn.datatables.net/buttons/3.0.1/js/buttons.html5.min.js"></script>
+  <script>
+new DataTable('#myTable', {
+    layout: {
+        topStart: {
+            buttons: ['copy', 'csv', 'excel', 'pdf', 'print']
+        }
+    }
+});
+
+    // var data = document.getElementById("abc").textContent;
+    // console.log(data); 
+    // var data = document.getElementsByClassName("abc");
+    // console.log(data[1].innerText); 
+    //  var data = document.getElementsByTagName('h1');
+
+    //   for(var i = 0; i < 2; i++)
+    //   {
+    //     data[i].style.color = "pink";
+    //     data[i].style.fontSize = "500px";
+    //   }
+
+    // function checkkaro(){
+    //     window.location.href = "https://www.google.com/";
+    // }
+
+
+    // function Addition(){
+    //   var value1 = parseInt(document.getElementById("num1").value);
+    //   var value2 = parseInt(document.getElementById("num2").value);
+    //   var result = document.getElementById("output");
+    //   result.value = value1 + value2;
+    // }
+
+    // document.getElementById("num1").addEventListener('input',calculateSum);
+    // document.getElementById("num2").addEventListener('input',calculateSum);
+
+    // function calculateSum(){
+    //   var value1 = parseInt(document.getElementById("num1").value) || 0;
+    //   var value2 = parseInt(document.getElementById("num2").value) || 0;
+    //   document.getElementById("output").value = value1 + value2;
+    // }
+  </script>
+
+
+</body>
+
+</html>
